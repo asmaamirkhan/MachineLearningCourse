@@ -1,0 +1,2 @@
+1- vectorization
+2- doing ungraded part

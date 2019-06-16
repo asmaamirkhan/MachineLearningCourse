@@ -63,7 +63,7 @@ Theta2_grad = zeros(size(Theta2));
 %
 X = [ones(m, 1) X];
 y=[y zeros(m,num_labels-1)];
-n=y;
+
 for i=1:m
     temp=y(i,1);
     y(i,:) = zeros(1,num_labels);
@@ -101,28 +101,27 @@ J = J+ lambda*(t1+t2)/(2*m);
 % backpropagation
 
 for t=1:m
-    a1 = X(t,:)';
-    z2 = Theta1*a1;
-    a2= [1;sigmoid(z2)];
+    a1 = X(t,:);
+    z2 = Theta1*a1';
+    a2= [1,sigmoid(z2)'];
     
-    z3 = Theta2*a2;
+    z3 = Theta2*a2';
     a3= sigmoid(z3);
-    size(y);
-    y_vec= [1:num_labels]==n(t);
+    
+    y_vec= [1:num_labels]==y(t);
     
     delta3=a3-y_vec';
     delta2=(Theta2'*delta3).*[1;sigmoidGradient(z2)];
     delta2=delta2(2:end);
-    Theta1_grad = Theta1_grad + delta2*a1';
+    size(delta3)
+    size(a2)
     Theta2_grad = Theta2_grad + delta3*a2';
-    
+    Theta1_grad = Theta1_grad + delta2*a1';
 end
 
-Theta1_grad = Theta1_grad/m;
-Theta2_grad = Theta2_grad/m;
 
-Theta1_grad(:,2:end) = Theta1_grad(:,2:end)+(lambda/m)*Theta1(:,2:end);
-Theta2_grad(:,2:end) = Theta2_grad(:,2:end)+(lambda/m)*Theta2(:,2:end);
+
+
 
 % -------------------------------------------------------------
 
