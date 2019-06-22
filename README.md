@@ -13,7 +13,7 @@ An 11-WEEK course (55-hour) provided by Stanford University on Coursera and expl
    * Deep learning
 * Best practices in machine learning 
    * Bias/variance theory
-   * innovation process in machine learning and AI
+   * Innovation process in machine learning and AI
 
 ## Repo Contents
 * Lectures of the instructor 
