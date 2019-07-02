@@ -23,7 +23,7 @@ An 11-WEEK course (55-hour) provided by Stanford University on Coursera and expl
 > Most of notes in notes document are copied from the lectures, my own notes are added as comment lines between /\* \*/ so they may contain incorrect info
 
 ## Certificate
-[Machine Learning Certifictae](https://www.coursera.org/account/accomplishments/verify/9VTFYAU9T9BD)
+[Machine Learning Certificate](https://www.coursera.org/account/accomplishments/verify/9VTFYAU9T9BD)
 
 ## Reference
 Stanford University - Andrew Ng - [Machine Learning Course](https://www.coursera.org/learn/machine-learning)
